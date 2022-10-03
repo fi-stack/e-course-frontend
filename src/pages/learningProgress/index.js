@@ -30,9 +30,7 @@ const LearningProgress = () => {
               <td>
                 <a href={`/courses/${value.course.id}`}>{value.course.name}</a>
               </td>
-              <td>
-                {value.progress} / {value.course_atoms_count}
-              </td>
+              <td>{value.total}</td>
               <td>{value.is_completed ? "Selesai" : "Sedang Belajar"}</td>
             </tr>
           ))}

@@ -47,11 +47,39 @@ const OrderDetail = () => {
     <>
       <div className="card">
         <div className="card-body">
-          <div>{order.service?.name}</div>
-          <div>{order.service?.discount}</div>
-          <div>{order.service?.price}</div>
-          <div>{order.status}</div>
-          <div>Silahkan melakukan pembayaran ke {order.payment_type}</div>
+          <table className="table table-bordered">
+            <tr>
+              <td>Service</td>
+              <td>:</td>
+              <td>{order.service?.name}</td>
+            </tr>
+            <tr>
+              <td>Harga</td>
+              <td>:</td>
+              <td>
+                <s>{order.service?.price}</s>
+              </td>
+            </tr>
+            <tr>
+              <td>Diskon</td>
+              <td>:</td>
+              <td>{order.service?.discount}</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>:</td>
+              <td>{order.service?.total}</td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>:</td>
+              <td>{order.status}</td>
+            </tr>
+          </table>
+          <div>
+            Silahkan melakukan pembayaran ke {order.payment_type} sebelum{" "}
+            <b>{order.expired_at}</b> sisa <b>{order.left_at}</b>
+          </div>
           <div>Bukti Pembayaran:</div>
           <img src={`${order.image}`} className="img-thumbnail w-25" />
           <div>

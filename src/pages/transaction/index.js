@@ -21,7 +21,6 @@ const Transaction = () => {
               <th>No.</th>
               <th>Servis</th>
               <th>Jenis Pembayaran</th>
-              <th>Bukti Pembayaran</th>
               <th>Status</th>
               <th>Aksi</th>
             </tr>
@@ -32,7 +31,6 @@ const Transaction = () => {
                 <td>{index + 1}</td>
                 <td>{value.service.name}</td>
                 <td>{value.payment_type}</td>
-                <td>{value.payment_proof}</td>
                 <td>{value.status}</td>
                 <td>
                   <Link

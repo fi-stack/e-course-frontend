@@ -26,7 +26,7 @@ const Checkout = () => {
     getUser()
       .then((res) => {
         const form = {
-          service: JSON.stringify(service),
+          service_id: id,
           user_id: res.data.id,
           payment_type: paymentType,
         };
